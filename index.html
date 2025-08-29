@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Grade Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Student Grade Calculator</h1>
+        
+        <div id="input_section">
+            <label for="student_name">Enter your name:</label>
+            <input type="text" id="student_name" placeholder="Your name">
+
+            <br><br>
+
+            <label for="maths_score">Enter Mathematics scores:</label>
+            <input type="text" id="maths_score" placeholder="e.g. 70,80,90">
+
+            <br><br>
+
+            <label for="english_score">Enter English scores:</label>
+            <input type="text" id="english_score" placeholder="e.g. 70,80,90">
+
+            <br><br>
+
+            <label for="science_score">Enter Science scores:</label>
+            <input type="text" id="science_score" placeholder="e.g. 70,80,90">
+
+            <br><br>
+
+            <button id="calculateBtn" onclick="displayResult()">Calculate Grade</button>
+        </div>
+
+        <div id="result_section">
+            <h1 id="greeting"></h1>
+            <h2 id="report_card"></h2>
+            <h2 id="display_student_name"></h2>
+            <h2 id="display_maths_score"></h2>
+            <h2 id="display_english_score"></h2>
+            <h2 id="display_science_score"></h2>
+            <h2 id="average_score"></h2>
+            <h2 id="grade"></h2>
+            <h3 id="feedback"></h3>
+        </div>
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
