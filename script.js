@@ -39,11 +39,20 @@
 //     console.log("Grade: F");
 // }
 
+// first function (formating the name)
+function formatName(name) {
+    // remove extra spaces at the start and end
+    name = name.trim();
+
+    // capitalize the first letter of each word
+    return name.split(' ').map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+}
 
 
-
+// second function (grade generator)
 function displayResult() {
     let studentName = document.getElementById('student_name').value;
+    studentName = formatName(studentName);
     let mathsScore = parseFloat(document.getElementById('maths_score').value);
     let scienceScore = parseFloat(document.getElementById('science_score').value);
     let englishScore = parseFloat(document.getElementById('english_score').value);
@@ -67,7 +76,7 @@ function displayResult() {
         color: '#27ae60',
         padding: '20px'
     });
-    
+
     document.getElementById('greeting').innerText = "Hello 👋, " + studentName + ", Welcome! 🎉";
     document.getElementById('report_card').innerText = "Your Report Card  📋";
     document.getElementById('display_student_name').innerText = "Student Name: " + studentName;
